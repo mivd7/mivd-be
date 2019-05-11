@@ -13,23 +13,24 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-        <Header />
+          <Header />
         </div>
-        <p className="main-text-box">
-          Swipe and click on a symbol to find out more about me
-        </p>
-        <Carousel
-          title=""
-        >
-          <Item>
-            {/* <img src={back} className={"item-nav"}/> */}
-            <img src={musicalNote} className={"item-logo"}/>
-            {/* <img src={next} className={"item-nav"}/> */}
-          </Item>
-          <Item>Item 2</Item>
-          <Item>Item 3</Item>
-          <Item>Item 4</Item>
-        </Carousel>
+        <div className="App-body">
+          <p className="main-text-box">
+            Swipe and click on a symbol to find out more about me
+          </p>
+          <Carousel
+            title=""
+          >
+            <Item>
+              <img src={musicalNote} className={"item-logo"}/>
+            </Item>
+
+            <Item>Item 2</Item>
+            <Item>Item 3</Item>
+            <Item>Item 4</Item>
+          </Carousel>
+        </div>
       </div>
     );
   }
