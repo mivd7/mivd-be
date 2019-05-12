@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/layout/Header';
 import Home from './components/HomeScreen';
 import Footer from './components/layout/Footer';
+// import SideBox from './components/layout/SideBox';
 import './App.css'
 
 export default class App extends Component {
@@ -14,6 +15,9 @@ export default class App extends Component {
 
         <div className="main-body">
           <Home/>
+          <div className="main-side">
+            {/* <SideBox/> */}
+          </div>
         </div>
         <Footer/>
 

@@ -39,7 +39,7 @@
   border: solid 1px #fff;
   box-shadow:
     inset 60px 0 120px #fa5858,
-    inset -60px 0 120px grey;
+    inset -60px 0 120px #fa5858;
   height: 75%;
   align-self: center;
   font-size: 2rem;
@@ -47,9 +47,13 @@
 
 .main-side {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 25rem;
+  left: 5rem;
+  width: 40rem;
+  height: 35rem;
   text-align: center;
+  margin-left: 5px;
+  width: 50rem;
 }
 
 .main-side__composition {
@@ -57,7 +61,8 @@
 }
 
 .main-side__composition__photo {
-  width: 55%;
+  width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 1.5rem 4rem rgba(black, .4);
   border-radius: 2px;
   position: absolute;
@@ -66,19 +71,35 @@
   outline-offset: 1rem;
 }
 
+.main-side__composition__photo:hover {
+  outline: 1.5rem transparent white; 
+  transform: scale(1.1) translateY(-0.5rem);
+  box-shadow: 0 2.5rem 4rem rgba(black, .5);
+  z-index: 2;
+}
+
 .main-side__composition__photo--p1 {
-  left: 0;
-  top: -2rem;
+   /* mic */
+  left: 5;
+  top: -5rem;
 }
 
 .main-side__composition__photo--p2 {
+  /* guitar */
   left: 0;
-  top: 2rem;
+  top: 10rem;
 }
 
 .main-side__composition__photo--p3 {
-  left: 20%;
+  /* reading */
+  left: 50rem;
   top: 10rem;
+}
+
+.main-side__composition__photo--p4 {
+  /* boomschors */
+  left: 0rem;
+  top: 20rem;
 }
 
 .col-1-of-2 {
@@ -89,8 +110,10 @@
   cursor: pointer;
   position: relative;
   align-self: center;
+  align-content: center;
   padding: 5rem;
-  margin-bottom: 5rem;
+  margin-left: 1rem;
+  margin-bottom: 6rem;
 }
 
 .item-gallery__image {
@@ -102,8 +125,8 @@
 
 .item-gallery__label {
   position: absolute;
-  font-size: 3rem;
-  min-width: 8rem;
+  font-size: 2rem;
+  margin-bottom: 50rem;
 }
 
 /* .item-button__next {
