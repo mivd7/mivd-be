@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom';
 
 import Carousel from './components/layout/Carousel';
 import Item from './components/layout/Item';
-import Header from './components/Header';
+import Header from './components/layout/Header';
 import Skills from './components/Skills';
 import Music from './components/Music';
 import WorkExperience from './components/WorkExperience';
@@ -23,10 +23,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
+        <div className="header">
           <Header />
         </div>
-        <div className="App-body">
+        <div className="main-body">
           <div className="item-gallery">
           <Carousel title="" >
               <Item>
@@ -79,7 +79,7 @@ export default class App extends Component {
           </Carousel>
           </div>
         </div>
-        <footer className="App-footer">
+        <footer className="footer">
         <iframe title="de la" width="560" height="315" src="https://www.youtube.com/embed/P8-9mY-JACM?start=30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
         <br/> © MIVD Web Development, 2019</footer>
 
