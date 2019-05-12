@@ -62,7 +62,9 @@ export default class App extends Component {
           </Carousel>
           </div>
         </div>
-        <footer>(c) MIVD Web Development, 2019</footer>
+        <footer className="App-footer">
+        <iframe title="de la" width="560" height="315" src="https://www.youtube.com/embed/P8-9mY-JACM?start=30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
+        <br/> © MIVD Web Development, 2019</footer>
       </div>
     );
   }
