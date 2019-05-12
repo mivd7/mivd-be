@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Swipeable } from 'react-swipeable';
-import { throttle } from 'lodash'
 import CarouselContainer from './CarouselContainer'
 import Wrapper from './Wrapper'
 import CarouselSlot from './CarouselSlot'

@@ -112,24 +112,37 @@
   opacity: .9;
 }
 
-.Skills-text-box {
-  position: absolute;
-  background-color:  #FAA80E;
-  color: #616160;
-  width: 50%;
-  height: 250px;
-  padding: 50px;
-  top: 30%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  text-align: center;  
-  font-size: 1.25rem;
-  border: 10px dotted black;
+.item-box {
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-left: 40%;
+  max-width: 32rem;
+  max-height: 32rem;
+  background-color: lightblue ;
+  background-size: cover;
+  border: solid 5px #eee;
   border-radius: 10px;
-  margin-top: 50px;
-  opacity: .95;
-  text-decoration: none;
+  box-shadow:
+    inset 60px 0 120px #FAA80E,
+    inset -60px 0 120px #FAA80E;
+  text-align: center;
+  padding: 20px;
 }
+
+.item-box__text {
+  margin-bottom: 50px;
+}
+
+.item-box__closebtn {
+  background-image: url(./styles/svg/cancel.svg);
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 5%;
+  height: 5%;
+  cursor: pointer;
+}
+
 
 .App-footer {
   padding: 25px;
