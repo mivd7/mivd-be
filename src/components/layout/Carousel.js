@@ -62,7 +62,7 @@ class Carousel extends Component {
   }
 
   render() {
-    const { title, children } = this.props
+    const { children } = this.props
     const config = {
       onSwipedLeft: () => this.nextSlide(),
       onSwipedRight: () => this.previousSlide(),
@@ -72,9 +72,7 @@ class Carousel extends Component {
     }
 
     return (
-      <div>
-        <h2>{ title }</h2>
-        
+      <div className="item-gallery">
         <Swipeable {...config}>
           <Wrapper>
             <CarouselContainer sliding={this.state.sliding} direction={this.state.direction}>
@@ -89,7 +87,7 @@ class Carousel extends Component {
             </CarouselContainer>
           </Wrapper>
         </Swipeable>
-      </div>
+       </div>
     )
   }
 }
