@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import Carousel from './components/layout/Carousel';
 import Item from './components/layout/Item';
 import Header from './components/Header';
@@ -7,6 +8,8 @@ import macbook from './styles/svg/macbook2.svg';
 import glasses from './styles/svg/glasses.svg';
 import growth from './styles/svg/growth.svg';
 import avatar from './styles/svg/avatar.svg';
+import writing from './styles/svg/writing.svg';
+import backpacking from './styles/svg/backpacker-hiking.svg';
 
 import './App.css'
 
@@ -18,39 +21,48 @@ export default class App extends Component {
           <Header />
         </div>
         <div className="App-body">
-          <p className="main-text-box">
-            Swipe and click on a symbol to find out more about me
-          </p>
           <div className="item-gallery">
           <Carousel title="" >
-            
               <Item>
                 <img src={musicalNote} className={"item-gallery__image"} alt="music"/>
-                <label>MIVD makes music</label>
+                <label className="item-gallery item-gallery__label">Music</label>
               </Item>
 
               <Item>
                 <img src={macbook} className={"item-gallery__image"} alt="developer"/>
-                <label>MIVD makes web apps</label>
+                <label className="item-gallery item-gallery__label">Web Development</label>
+              </Item>
+
+              <Item>
+                <img src={backpacking} className={"item-gallery__image"} alt="EXP"/>
+                <label className="item-gallery item-gallery__label">Work Experience</label>
+              </Item>
+
+              <Item>
+                <Link to={'/skills'}>
+                  <img src={growth} className={"item-gallery__image"} alt="skills"/>
+                  <label className="item-gallery item-gallery__label">Skills</label>
+                </Link>
               </Item>
 
               <Item>
                 <img src={glasses} className={"item-gallery__image"} alt="education"/>
-                <label>MIVD makes science</label>
-              </Item>
-
-              <Item>
-                <img src={growth} className={"item-gallery__image"} alt="skills"/>
-                <label>MIVD makes skills</label>
+                <label className="item-gallery item-gallery__label">Education</label>
               </Item>
 
               <Item>
                 <img src={avatar} className={"item-gallery__image"} alt="bio"/>
-                <label>Short Bio</label>
+                <label className="item-gallery item-gallery__label">Bio</label>
+              </Item>
+
+              <Item>
+                <img src={writing} className={"item-gallery__image"} alt="writing"/>
+                <label className="item-gallery item-gallery__label">Writing</label>
               </Item>
           </Carousel>
           </div>
         </div>
+        <footer>(c) MIVD Web Development, 2019</footer>
       </div>
     );
   }

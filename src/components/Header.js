@@ -8,12 +8,11 @@ export default class Header extends Component {
         <a href="/">
           <img src={logo} className="App-logo" alt="logo" />
         </a>
-        <p className="App-header-text">
-          Max van Deurzen
-          <br/>
-          Developer / Historian / Musician / Poet 
-          <br/>
+
+        <p className="App-header-text"> To learn more about Max van Deurzen<br/> 
+        &#8617; SWIPE LEFT OR RIGHT &#8618;
         </p>
+        
       </div>   
     )
   }

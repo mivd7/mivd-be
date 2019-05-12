@@ -12,7 +12,7 @@ class Carousel extends Component {
       sliding: false
     }
 
-  getOrder(itemIndex) {
+  getOrder = (itemIndex) => {
     const { position } = this.state
     const { children } = this.props
     const numItems = children.length || 1
@@ -49,12 +49,25 @@ class Carousel extends Component {
     }, 50)
   }
 
+  handleKeyInput = (e) => {
+      const { position } = this.state
+      const { children } = this.props
+      const numItems = children.length
+      // arrow up/down button should select next/previous list element
+      if (e.keyCode === 39 && position > 0) {
+        this.nextSlide()
+      } 
+      else if (e.keyCode === 37 && position < numItems - 1) {
+        this.previousSlide()
+      }
+  }
 
   render() {
     const { title, children } = this.props
     const config = {
       onSwipedLeft: () => this.nextSlide(),
       onSwipedRight: () => this.previousSlide(),
+      onKeyDown: () => this.handleKeyInput(),
       preventDefaultTouchmoveEvent: true,
       trackMouse: true
     }
